@@ -1,16 +1,16 @@
-- name: Build & Test
-    uses: ashutoshvarma/action-cmake-build@master
-    with:
-      build-dir: ${{ runner.workspace }}/build
-      # will set the CC & CXX for cmake
-      cc: gcc
-      cxx: g++
-      build-type: Release
-      # Extra options pass to cmake while configuring project
-      configure-options: -DCMAKE_C_FLAGS=-w32 -DPNG_INCLUDE=OFF
-      run-test: true
-      ctest-options: -R mytest
-      # install the build using cmake --install
-      install-build: true
-      # run build using '-j [parallel]' to use multiple threads to build
-      parallel: 14
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  ubuntu-build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: Build project
+      uses: nicledomaS/cmake_build_action@v1.4
+      with:
+        submodule_update: ON
+        run_tests: ON
+        unit_test_build: -Dtest=ON
