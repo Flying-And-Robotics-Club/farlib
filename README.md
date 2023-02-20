@@ -10,4 +10,11 @@ Build your code
 ```bash
 mkdir build
 cmake ..
+make -j1
+```
+
+To run any executables:
+```bash
+cd build
+./<executable>
 ```
