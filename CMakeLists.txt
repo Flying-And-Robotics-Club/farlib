@@ -4,12 +4,14 @@ project(farlib)
 set(CMAKE_CXX_STANDARD 14) # C++14 Standard
 
 ## Add C++ executables here
-# add_executable(pid src/control/pid.cpp)
+  add_executable(graph_test test/graph_test.cpp)
+  target_link_libraries(graph_test ${PROJECT_NAME})
 
 # Declare a C++ library
 add_library(${PROJECT_NAME}
-  src/control/pid.cpp
-  src/planning/path-planning.cpp
+    src/control/pid.cpp
+    src/planning/path-planning.cpp
+    src/planning/graph.cpp
 )
 
 # Include Header files
