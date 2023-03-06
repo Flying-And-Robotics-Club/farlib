@@ -1,4 +1,4 @@
-#include <farlib/planning/graph.hpp>
+#include <farlib/data/graph.hpp>
 
 int main(int argc, char **argv)
 {

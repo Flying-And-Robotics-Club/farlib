@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 14) # C++14 Standard
 add_library(${PROJECT_NAME}
     src/control/pid.cpp
     src/planning/path-planning.cpp
-    src/planning/graph.cpp
+    src/data/graph.cpp
 )
 
 # Include Header files
