@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 project(farlib)
-set(CMAKE_CXX_STANDARD 14) # C++14 Standard
+set(CMAKE_CXX_STANDARD 17) # C++17 Standard
 
 ## Add C++ executables here
   add_executable(graph_test test/graph_test.cpp)
